@@ -1,12 +1,16 @@
 package lista6;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Principal {
 
 	private static Scanner entrada;
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
+		
+		CadastrarBanco.escritor("Adededef", 22);
+		CadastrarBanco.leitor();
 		int sair = 0;
 		int opcao = 0;
 		Opcoes o  = new Opcoes();
