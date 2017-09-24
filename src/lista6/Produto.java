@@ -1,12 +1,16 @@
 package lista6;
 
-public class Produto {
+import java.io.Serializable;
+
+public class Produto implements  Comparable<Produto>, Serializable{
+
 	private String nome;
-	private int quantidade;
-	private static int quantidadeTotalProdutos;
-	
-	public Produto() {
-		setQuantidadeTotalProdutos(getQuantidadeTotalProdutos() + 1);
+	private int quantidade=0;
+
+	public Produto(String nome, int quantidade) {
+		super();
+		this.nome = nome;
+		this.quantidade = quantidade;
 	}
 	
 	public String getNome() {
@@ -22,11 +26,15 @@ public class Produto {
 		this.quantidade = quantidade;
 	}
 
-	public static int getQuantidadeTotalProdutos() {
-		return quantidadeTotalProdutos;
+	
+	public String informacao() {
+		return "Nome: "+this.nome+"\tQuantidade: "+this.quantidade ;
+		
 	}
-
-	public static void setQuantidadeTotalProdutos(int quantidadeTotalProdutos) {
-		Produto.quantidadeTotalProdutos = quantidadeTotalProdutos;
+	
+	public int compareTo(Produto o) {
+		//	Integer n = n.compareTo(o.getTel());
+		return nome.compareTo(o.getNome());
 	}
+	
 }

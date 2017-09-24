@@ -1,4 +1,4 @@
-package lista7;
+package lista6;
 
 public class Outputs{
 

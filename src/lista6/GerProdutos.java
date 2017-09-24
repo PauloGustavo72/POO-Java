@@ -1,4 +1,4 @@
-package lista7;
+package lista6;
 
 import java.util.List;
 

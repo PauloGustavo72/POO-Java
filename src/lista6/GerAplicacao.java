@@ -1,4 +1,4 @@
-package lista7;
+package lista6;
 
 import java.io.IOException;
 import java.util.ArrayList;
